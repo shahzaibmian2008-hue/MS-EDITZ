@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MS EDITS</title>
+  <title>MS EDITZ</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,65 +12,167 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background-image: linear-gradient(to bottom, rgba(26,26,26,0.8), rgba(0,0,0,0.8)), url('https://i.pinimg.com/originals/0b/cf/8a/0bcf8af774b75f8f42727714471419d6.jpg');
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://i.postimg.cc/R0nw61sh/Babar-Azam-Hd-Wallpapers-Babar-Azam-Hd-Pictures-Babar-Azam-Birthday-Babar-Azam-Wallpapers-Hd.jpg');
       background-size: cover;
       background-position: center;
+      animation: fadeIn 1s ease-in-out;
     }
 
     .container {
       background-color: rgba(255, 255, 255, 0.1);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+      padding: 35px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
       text-align: center;
       width: 90%;
-      max-width: 450px;
-      backdrop-filter: blur(10px);
+      max-width: 480px;
+      backdrop-filter: blur(12px);
+      animation: slideUp 0.8s ease-out;
     }
 
     img {
-      width: 170px;
-      height: 170px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #007bff;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4);
+      border: 4px solid #007bff;
+      margin-bottom: 25px;
+      box-shadow: 0 3px 10px rgba(0, 123, 255, 0.5);
+      animation: pulseZoom 3s ease-in-out infinite; /* Zoom In/Out Animation */
     }
 
     h1 {
       color: #fff;
-      margin-bottom: 15px;
-      font-size: 2.2em;
-      letter-spacing: 1px;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+      font-size: 2.5em;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+      font-weight: bold;
+      animation: slideRight 0.8s ease-out;
     }
 
-    a {
-      text-decoration: none;
-      color: #fff;
-      display: block;
-      margin-bottom: 15px;
-      padding: 14px;
-      border-radius: 8px;
-      background-color: rgba(0, 123, 255, 0.7);
-      transition: background-color 0.3s ease;
+    /*  Links positioned above and below the heading */
+    .link-container {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 500;
-      font-size: 1.1em;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;   /* Center items horizontally */
+      margin-bottom: 20px;  /* Add spacing */
     }
 
-    a:hover {
+    .link-container a {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        margin-bottom: 18px;
+        padding: 16px;
+        border-radius: 10px;
+        background-color: rgba(0, 123, 255, 0.8);
+        transition: background-color 0.3s ease;
+        width: 100%;           /* Take full width */
+        text-align: center;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+        animation: bounceIn 0.6s ease-out;  /* Bounce In */
+    }
+
+    .link-container a:hover {
       background-color: #0056b3;
     }
 
     .telegram-icon {
-      width: 28px;
-      height: 28px;
-      margin-right: 12px;
+      width: 30px;
+      height: 30px;
+      margin-right: 15px;
+    }
+
+    /* Media Queries for Responsiveness */
+    @media (max-width: 600px) {
+      .container {
+        width: 95%;
+      }
+      img {
+        width: 200px;
+        height: 200px;
+      }
+      h1 {
+        font-size: 2.2em;
+      }
+      .link-container a {
+          font-size: 1.3em;
+          padding: 18px;
+      }
+      .telegram-icon {
+          width: 35px;
+          height: 35px;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        transform: scale(0.8);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideRight {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes bounceIn {
+      from {
+        opacity: 0;
+        transform: scale(0.7);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Zoom Animation for Image (Pulse Zoom) */
+    @keyframes pulseZoom {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 3px 10px rgba(0, 123, 255, 0.5);
+      }
+      50% {
+        transform: scale(1.1);
+        box-shadow: 0 8px 20px rgba(0, 123, 255, 0.7);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 3px 10px rgba(0, 123, 255, 0.5);
+      }
     }
   </style>
 </head>
@@ -78,14 +180,14 @@
 
   <div class="container">
     <img src="https://i.postimg.cc/HkZRMwwv/IMG-20250905065130544.jpg" alt="Your Picture">
-    <h1>MS EDITS</h1>
+    <h1>MS EDITZ</h1>
 
-    <a href="https://t.me/mseditz_56" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/1200px-Telegram_logo.svg.png" alt="Telegram Icon" class="telegram-icon">
-      Telegram Channel
-    </a>
-
-    <a href="https://wa.me/+923089155279">WhatsApp</a>
+    <div class="link-container">
+      <a href="https://t.me/mseditz_56" target="_blank">
+        Telegram Channel
+      </a>
+      <a href="https://wa.me/+923089155279">WhatsApp</a>
+    </div>
 
   </div>
 
